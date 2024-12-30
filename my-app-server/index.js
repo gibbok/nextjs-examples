@@ -1,11 +1,8 @@
 const express = require("express");
-const dotenv = require("dotenv");
 
-// configures dotenv to work in your application
-dotenv.config();
+const PORT = 3001;
+
 const app = express();
-
-const PORT = process.env.PORT;
 
 app.get("/", (request, response) => {
   response.status(200).send("Hello World");
