@@ -29,9 +29,10 @@ export default async function Page() {
       <ul className="list-disc ml-2">
         <li>
           During the build process (`next build`), Next.js will execute the
-          `Page` component, including the `fetchData` function.
+          `Page` component, including the `fetchData` function (from this
+          example page code).
         </li>
-        <li>The data is fetched from the external API at build time</li>
+        <li>The data is fetched from the external API at build time.</li>
         <li>
           Next.js generates static HTML based on the component&apos;s render
           output, which includes the fetched data.
@@ -46,10 +47,10 @@ export default async function Page() {
         treats this as a static page.
       </p>
       <p className="mb-5">
-        Ideal for sites with articles or posts that don&apos;t require frequent
-        updates. Can work together with headless CMS like Contentful to fetch
-        and render content at build time. Triggering static site builds can be
-        done using webhooks.
+        This featyre is ideal for sites with articles or posts that don&apos;t
+        require frequent updates. Can work together with headless CMS like
+        Contentful to fetch and render content at build time. Triggering static
+        site builds can be done using webhooks.
       </p>
 
       <Image

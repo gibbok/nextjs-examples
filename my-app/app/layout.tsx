@@ -30,7 +30,6 @@ export default function RootLayout({
       >
         <div className="flex m-5">
           <nav className="flex flex-col mr-10">
-            Server Side
             <ul className="list-disc ml-2 w-48">
               <li>
                 <Link className="underline" href="/">
@@ -48,18 +47,26 @@ export default function RootLayout({
                 </Link>
               </li>
               <li>
-                <Link className="underline" href="">
+                <Link className="underline" href="/dynamic-render-streaming">
+                  Dynamic Rendering with Streaming
+                </Link>
+              </li>
+              <li>
+                <Link className="underline" href="/partial-pre-rendering-ppr">
+                  Partial Prerendering (PPR)
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="underline"
+                  href="/incremental-static-regeneration-isr"
+                >
                   Incremental Static Regeneration (ISR)
                 </Link>
               </li>
               <li>
-                <a className="underline" href="/dynamic-render">
-                  Dyanamic Rendering
-                </a>
-              </li>
-              <li>
-                <Link className="underline" href="">
-                  Streaming
+                <Link className="underline" href="/hydratation">
+                  Hydratation
                 </Link>
               </li>
             </ul>
