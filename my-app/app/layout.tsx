@@ -30,11 +30,16 @@ export default function RootLayout({
       >
         <div className="flex m-5">
           <nav className="flex flex-col mr-10">
-            Server Components
-            <ul className="">
+            Server Side
+            <ul className="list-disc ml-2 w-48">
               <li>
-                <Link className="underline" href="">
+                <Link className="underline" href="/">
                   Static Rendering
+                </Link>
+              </li>
+              <li>
+                <Link className="underline" href="/static-site-generatiorn-ssg">
+                  Static Site Generation (SSG)
                 </Link>
               </li>
               <li>

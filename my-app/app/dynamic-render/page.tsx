@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 type Todo = {
   userId: number
   id: number
@@ -5,10 +7,12 @@ type Todo = {
   completed: boolean
 }
 
-const fetchData = (): Promise<Todo[]> =>
-  fetch('https://jsonplaceholder.typicode.com/todos/').then((response) =>
+const fetchData = (): Promise<Todo[]> => {
+  console.log('xxxxxxx fetching data')
+  return fetch('https://jsonplaceholder.typicode.com/todos/').then((response) =>
     response.json()
   )
+}
 
 export default async function Page() {
   const result = await fetchData()
@@ -33,6 +37,18 @@ export default async function Page() {
         worrying about the performance impact of fetching all the data at
         request time.
       </p>
+      <Image
+        src="/dynamic-render-1.png"
+        width={1000}
+        height={500}
+        alt="Dynamic Render 1"
+      />
+      <Image
+        src="/dynamic-render-2.png"
+        width={1000}
+        height={500}
+        alt="Dynamic Render 2"
+      />
       <pre>{JSON.stringify(result, undefined, 4)}</pre>
     </div>
   )
