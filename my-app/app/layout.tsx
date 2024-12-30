@@ -53,18 +53,13 @@ export default function RootLayout({
                 </Link>
               </li>
               <li>
-                <Link className="underline" href="">
-                  Incremental Static Regeneration (ISR)
+                <Link className="underline" href="/partial-pre-rendering-ppr">
+                  Partial Prerendering (PPR)
                 </Link>
               </li>
               <li>
-                <a className="underline" href="/dynamic-render">
-                  Dyanamic Rendering
-                </a>
-              </li>
-              <li>
                 <Link className="underline" href="">
-                  Streaming
+                  TODO Incremental Static Regeneration (ISR)
                 </Link>
               </li>
             </ul>
