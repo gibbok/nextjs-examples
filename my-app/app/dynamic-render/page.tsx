@@ -14,29 +14,47 @@ const fetchData = (): Promise<Todo[]> => {
   )
 }
 
+export const dynamic = 'force-dynamic'
+
 export default async function Page() {
   const result = await fetchData()
 
   return (
     <div className="">
       <h1 className="uppercase text-4xl">Server Components</h1>
-      <h2 className="text-3xl mb-5">Dynamic Rendering</h2>
+      <h2 className="text-3xl mb-5">Static Site Generation (SSG)</h2>
       <p className="mb-5">
-        With Dynamic Rendering, routes are rendered for each user at request
-        time.
+        If a page uses Static Generation, the page HTML is generated at build
+        time. That means in production, the page HTML is generated when you run
+        next build. This HTML will then be reused on each request. It can be
+        cached by a CDN.
+      </p>
+      <ul className="list-disc ml-2">
+        <li>
+          During the build process (`next build`), Next.js will execute the
+          `Page` component, including the `fetchData` function.
+        </li>
+        <li>The data is fetched from the external API at build time</li>
+        <li>
+          Next.js generates static HTML based on the component&apos;s render
+          output, which includes the fetched data.
+        </li>
+        <li>This static HTML is then served for subsequent requests.</li>
+      </ul>
+      <p className="my-5">
+        The reason this happens despite the `async` function and `fetch` call is
+        that Next.js attempts to statically optimize pages when possible. In
+        this case, since there are no dynamic elements (like `useSearchParams`,
+        `cookies`, etc.) that would require per-request execution, Next.js
+        treats this as a static page.
       </p>
       <p className="mb-5">
-        Dynamic rendering is useful when a route has data that is personalized
-        to the user or has information that can only be known at request time,
-        such as cookies or the URL&apos;s search params.
+        Ideal for sites with articles or posts that don&apos;t require frequent
+        updates. Can work together with headless CMS like Contentful to fetch
+        and render content at build time. Triggering static site builds can be
+        done using webhooks.
       </p>
-      <p className="mb-5">
-        In Next.js, you can have dynamically rendered routes that have both
-        cached and uncached data. This is because the RSC Payload and data are
-        cached separately. This allows you to opt into dynamic rendering without
-        worrying about the performance impact of fetching all the data at
-        request time.
-      </p>
+
       <Image
         src="/dynamic-render-1.png"
         width={1000}
