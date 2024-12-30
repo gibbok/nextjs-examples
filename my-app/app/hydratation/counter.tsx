@@ -12,11 +12,21 @@ function Counter() {
   return (
     <div>
       <p>Count: {count}</p>
+      {count > 0 ? (
+        <button
+          onClick={() => {
+            window.alert('hello')
+          }}
+          className="bg-blue-500 bg-blue-700 text-white font-bold py-2 px-4 rounded mr-5"
+        >
+          say hello
+        </button>
+      ) : null}
       <button
         onClick={handleClick}
-        className='className="bg-blue-500 bg-blue-700 text-white font-bold py-2 px-4 rounded"'
+        className="bg-blue-500 bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
-        Increment
+        click to increment
       </button>
     </div>
   )
