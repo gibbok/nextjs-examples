@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Counter from './counter'
 
 export default function Page() {
   return (
@@ -14,18 +14,7 @@ export default function Page() {
         to form a fully functional React application.
       </p>
       <p className="mb-5">XXX</p>
-      <Image
-        src="/static-render-1.png"
-        width={1000}
-        height={1000}
-        alt="Static Render 1"
-      />
-      <Image
-        src="/static-render-2.png"
-        width={1000}
-        height={1000}
-        alt="Static Render 2"
-      />
+      <Counter />
     </div>
   )
 }
