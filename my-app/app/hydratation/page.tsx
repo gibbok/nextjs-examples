@@ -14,6 +14,11 @@ export default function Page() {
         &quot;hydrates&quot; this static content, imbuing it with interactivity
         to form a fully functional React application.
       </p>
+
+      <p className="mb-5">
+        Page linked from `Link` component from Next.js can be prefetched to
+        improve performance. Prefetch works only in production mode.
+      </p>
       <p className="mb-5">XXX</p>
       <Counter />
       <Link className="underline" href="/" prefetch>
