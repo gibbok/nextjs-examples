@@ -38,6 +38,11 @@ export default function RootLayout({
               </li>
               <li>
                 <a className="underline" href="">
+                  Incremental Static Regeneration (ISR)
+                </a>
+              </li>
+              <li>
+                <a className="underline" href="">
                   Dyanamic Rendering
                 </a>
               </li>

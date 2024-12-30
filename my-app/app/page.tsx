@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Home() {
   return (
     <div className="">
@@ -12,16 +14,29 @@ export default function Home() {
       </p>
       <ul className="list-disc ml-2">
         <li>Static Rendering</li>
+        <li>Incremental Static Regeneration (ISR)</li>
         <li>Dynamic Rendering</li>
         <li>Streaming</li>
       </ul>
       <h3 className="text-2xl my-8">Static Rendering</h3>
       <p>
         This route is rendered at build time, or in the background after data
-        revalidation. The result is cached and can be pushed to a Content
+        revalidation (ISR). The result is cached and can be pushed to a Content
         Delivery Network (CDN). This optimization allows you to share the result
         of the rendering work between users and server requests.
       </p>
+      <Image
+        src="/static-render-1.png"
+        width={1000}
+        height={1000}
+        alt="Static Render 1"
+      />
+      <Image
+        src="/static-render-2.png"
+        width={1000}
+        height={1000}
+        alt="Static Render 2"
+      />
     </div>
   )
 }
