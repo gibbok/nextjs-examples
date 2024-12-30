@@ -12,7 +12,7 @@ app.get("/", (request, response) => {
 });
 
 app.get("/todos", function (_req, res) {
-  console.log("xxx income request todos");
+  console.log(`xxx income request todos ${new Date().toISOString()}`);
   res.json([
     {
       userId: 1,

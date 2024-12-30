@@ -9,7 +9,7 @@ type Todo = {
 
 const fetchData = (): Promise<Todo[]> => {
   console.log('xxxxxxx fetching data')
-  return fetch('https://localhost:3001/todos/').then((response) =>
+  return fetch('http://localhost:3001/todos').then((response) =>
     response.json()
   )
 }
