@@ -43,7 +43,7 @@ export default function Page() {
         instructions to render HTML on the server.
         <br />
         Then, on the client: The HTML is used to immediately show a fast
-        non-interactive preview of the route - this is for the initial page load
+        non-interactive preview of the route, this is for the initial page load
         only.
         <br />
         The React Server Components Payload is used to reconcile the Client and

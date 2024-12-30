@@ -24,7 +24,7 @@ function Counter() {
       ) : null}
       <button
         onClick={handleClick}
-        className="bg-blue-500 bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
       >
         click to increment
       </button>
