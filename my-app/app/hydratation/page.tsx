@@ -1,4 +1,5 @@
 import Counter from './counter'
+import Link from 'next/link'
 
 export default function Page() {
   return (
@@ -15,6 +16,9 @@ export default function Page() {
       </p>
       <p className="mb-5">XXX</p>
       <Counter />
+      <Link className="underline" href="/" prefetch>
+        Static Rendering
+      </Link>
     </div>
   )
 }
