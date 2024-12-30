@@ -121,7 +121,7 @@ app.all("/chunks", function (_req, res, next) {
     const diff = timeNow - lastTick;
 
     if (diff >= 1000) {
-      console.log("xx ", count);
+      console.log("chunk ", count);
       res.write(
         JSON.stringify({
           type: "stream",

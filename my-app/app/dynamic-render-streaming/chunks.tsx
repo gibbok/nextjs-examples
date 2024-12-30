@@ -3,6 +3,7 @@ type Chunk = {
   chunk: number
 }
 
+// This does not work the response is not closed
 const fetchData = (): Promise<Chunk[]> => {
   console.log('xxxxxxx fetching Chunks')
   return fetch('http://localhost:3001/chunks').then((response) =>
