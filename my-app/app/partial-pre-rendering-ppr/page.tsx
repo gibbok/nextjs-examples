@@ -7,10 +7,12 @@ import { Temperatures } from '../dynamic-render-streaming/temperatures'
 export default function Page() {
   return (
     <div>
-      <h2 className="text-3xl mb-5">Partial Prerendering PPR</h2>
+      <h2 className="text-3xl mb-5">Partial Prerendering PPR (Canary)</h2>
       <p className="mb-5">
         Partial Prerendering (PPR) enables you to combine static and dynamic
-        components together in the same route. This is an experimental feature.
+        components together in the same route.
+      <p className="mb-5">
+        This is an experimental feature not recommed in production yet.
       </p>
       <p className="mb-5">
         During the build, Next.js prerenders as much of the route as possible.
