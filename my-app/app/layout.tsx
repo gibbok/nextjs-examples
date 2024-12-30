@@ -64,6 +64,11 @@ export default function RootLayout({
                   Incremental Static Regeneration (ISR)
                 </Link>
               </li>
+              <li>
+                <Link className="underline" href="/hydratation">
+                  Hydratation
+                </Link>
+              </li>
             </ul>
           </nav>
           <main>{children}</main>
