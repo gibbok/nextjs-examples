@@ -7,8 +7,11 @@ export default function Home() {
       <p className="mb-5">
         This route is rendered at build time, or in the background after data
         revalidation (ISR). The result is cached and can be pushed to a Content
-        Delivery Network (CDN). This optimization allows you to share the result
-        of the rendering work between users and server requests.
+        Delivery Network (CDN).
+      </p>
+      <p className="mb-5">
+        This optimization allows you to share the result of the rendering work
+        between users and server requests.
       </p>
       <Image
         src="/static-render-1.png"
