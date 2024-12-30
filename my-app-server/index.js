@@ -98,3 +98,40 @@ app
     // gracefully handle error
     throw new Error(error.message);
   });
+
+app.all("/chunks", function (_req, res, next) {
+  console.log(`xxx income request chunks ${new Date().toISOString()}`);
+
+  res.writeHead(200, {
+    "Content-Type": "text/plain",
+    "Transfer-Encoding": "chunked",
+  });
+
+  var chunks = 10;
+
+  if (chunks > 100) {
+    chunks = 100;
+  }
+
+  var count = 1;
+  let lastTick = Date.now();
+
+  while (count <= chunks) {
+    const timeNow = Date.now();
+    const diff = timeNow - lastTick;
+
+    if (diff >= 1000) {
+      console.log("xx ", count);
+      res.write(
+        JSON.stringify({
+          type: "stream",
+          chunk: count++,
+        }) + "\n"
+      );
+      lastTick = timeNow;
+    }
+  }
+
+  res.end();
+  next();
+});

@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import { Temperatures } from './temperatures'
 import { Pollutions } from './pollutions'
+import { Chunks } from './chunks'
 
 export default async function Page() {
   return (
@@ -14,6 +15,9 @@ export default async function Page() {
         </Suspense>
         <Suspense fallback={'Loading Pollutions ... '}>
           <Pollutions />
+        </Suspense>
+        <Suspense fallback={'Loading Chunks ... '}>
+          <Chunks />
         </Suspense>
       </div>
     </div>
