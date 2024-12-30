@@ -2,10 +2,9 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="">
-      <h1 className="uppercase text-4xl">Server Components</h1>
+    <div>
       <h2 className="text-3xl mb-5">Static Rendering</h2>
-      <p>
+      <p className="mb-5">
         This route is rendered at build time, or in the background after data
         revalidation (ISR). The result is cached and can be pushed to a Content
         Delivery Network (CDN). This optimization allows you to share the result

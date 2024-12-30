@@ -44,7 +44,7 @@ export default function RootLayout({
               </li>
               <li>
                 <Link className="underline" href="/dynamic-render">
-                  Dynamic Render
+                  Dynamic Rendering
                 </Link>
               </li>
               <li>
@@ -64,7 +64,7 @@ export default function RootLayout({
               </li>
             </ul>
           </nav>
-          <main className="">{children}</main>
+          <main>{children}</main>
         </div>
       </body>
     </html>

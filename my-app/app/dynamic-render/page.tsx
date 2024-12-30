@@ -21,13 +21,15 @@ export default async function Page() {
   const result = await fetchData()
 
   return (
-    <div className="">
-      <h1 className="uppercase text-4xl">Server Components</h1>
-      <h2 className="text-3xl mb-5">  Dynamic Render</h2>
+    <div>
+      <h2 className="text-3xl mb-5">  Dynamic Rendering</h2>
       <p className="mb-5">
         With dynamic rendering, content is rendered on the server for each user at request time (when the user visits the page). Useful for: Real-Time data, User-Specific Content, Request Time Information (based on cookies, URL search parameters).
       </p>
-      <ul className="list-disc ml-2">
+      <p className="mb-5">
+        The page is dynamic when:
+      </p>
+      <ul className="list-disc ml-2 mb-5">
         <li>
           Use of dynamic functions: If a page or layout uses dynamic functions such as `cookies()`, `headers()`, or `useSearchParams()`, it will be rendered dynamically
         </li>
@@ -35,7 +37,7 @@ export default async function Page() {
           Server Actions: If a page or layout uses Server Actions, it will be rendered dynamically
         </li>
         <li>
-          Explicit configuration: You can explicitly set a route to be dynamic by using the force-dynamic option in the route segment config .
+          Explicit configuration: You can explicitly set a route to be dynamic by using the &quot;force-dynamic&quot; (used in this example) option in the route segment config .
         </li>
         <li>
           Uncached data fetching: If you use `fetch()` requests without caching (e.g., cache: no-store ), this will trigger dynamic rendering .

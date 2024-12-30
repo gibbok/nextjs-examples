@@ -18,7 +18,7 @@ export default async function Page() {
   const result = await fetchData()
 
   return (
-    <div className="">
+    <div>
       <h2 className="text-3xl mb-5">Static Site Generation (SSG)</h2>
       <p className="mb-5">
         If a page uses Static Generation, the page HTML is generated at build
