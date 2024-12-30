@@ -17,7 +17,9 @@ export default function Page() {
 
       <p className="mb-5">
         Page linked from `Link` component from Next.js can be prefetched to
-        improve performance. Prefetch works only in production mode.
+        improve performance. Prefetch works only in production mode. When
+        prefetched, the RSC Payload is loaded in advanced so on the request the
+        new page can be hydratate faster.
       </p>
       <p className="mb-5">XXX</p>
       <div className="my-5">
