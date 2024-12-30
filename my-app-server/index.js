@@ -12,6 +12,7 @@ app.get("/", (request, response) => {
 });
 
 app.get("/todos", function (_req, res) {
+  console.log("xxx income request todos");
   res.json([
     {
       userId: 1,
