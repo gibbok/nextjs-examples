@@ -1,5 +1,5 @@
 import Counter from './counter'
-import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Page() {
   return (
@@ -20,10 +20,21 @@ export default function Page() {
         improve performance. Prefetch works only in production mode.
       </p>
       <p className="mb-5">XXX</p>
-      <Counter />
-      <Link className="underline" href="/" prefetch>
-        Static Rendering
-      </Link>
+      <div className="my-5">
+        <Counter />
+      </div>
+      <Image
+        src="/prefetch-1.png"
+        width={1000}
+        height={1000}
+        alt="Prefetch 1"
+      />
+      <Image
+        src="/prefetch-2.png"
+        width={1000}
+        height={1000}
+        alt="Prefetch 2"
+      />
     </div>
   )
 }
