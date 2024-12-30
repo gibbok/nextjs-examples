@@ -14,20 +14,5 @@ export default {
       },
     },
   },
-  plugins: [
-    //@ts-expect-error --xx
-    function ({ addUtilities }) {
-      addUtilities(
-        {
-          p: {
-            marginBottom: '1rem',
-          },
-          ul: {
-            marginBottom: '1rem',
-          },
-        },
-        ['responsive', 'hover']
-      )
-    },
-  ],
+  plugins: [],
 } satisfies Config
