@@ -19,7 +19,6 @@ export default async function Page() {
 
   return (
     <div className="">
-      <h1 className="uppercase text-4xl">Server Components</h1>
       <h2 className="text-3xl mb-5">Static Site Generation (SSG)</h2>
       <p className="mb-5">
         If a page uses Static Generation, the page HTML is generated at build
