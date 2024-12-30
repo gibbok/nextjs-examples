@@ -29,7 +29,7 @@ export default function RootLayout({
       >
         <div className="flex m-5">
           <nav className="flex flex-col mr-10">
-            <p className="uppercase">Server Components</p>
+            Server Components
             <ul className="">
               <li>
                 <a className="underline" href="">
