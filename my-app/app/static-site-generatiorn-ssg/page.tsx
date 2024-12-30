@@ -54,13 +54,13 @@ export default async function Page() {
       </p>
 
       <Image
-        src="/dynamic-render-1.png"
+        src="/ssg-1.png"
         width={1000}
         height={500}
         alt="Dynamic Render 1"
       />
       <Image
-        src="/dynamic-render-2.png"
+        src="/ssg-2.png"
         width={1000}
         height={500}
         alt="Dynamic Render 2"
