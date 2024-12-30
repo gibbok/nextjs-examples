@@ -17,7 +17,7 @@ function Counter() {
           onClick={() => {
             window.alert('hello')
           }}
-          className="bg-blue-500 bg-blue-700 text-white font-bold py-2 px-4 rounded mr-5"
+          className="bg-blue-700 text-white font-bold py-2 px-4 rounded mr-5"
         >
           say hello
         </button>

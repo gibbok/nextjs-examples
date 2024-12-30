@@ -21,7 +21,36 @@ export default function Page() {
         prefetched, the RSC Payload is loaded in advanced so on the request the
         new page can be hydratate faster.
       </p>
-      <p className="mb-5">XXX</p>
+      <p className="mb-5">
+        On the server, Next.js uses React&apos;s APIs to orchestrate rendering.
+        The rendering work is split into chunks: by individual route segments
+        and Suspense Boundaries
+      </p>
+      <p className="mb-5">
+        The RSC Payload is a compact binary representation of the rendered React
+        Server Components tree. It&apos;s used by React on the client to update
+        the browser&apos;s DOM. The RSC Payload contains: The rendered result of
+        Server Components Placeholders for where Client Components should be
+        rendered and references to their JavaScript files Any props passed from
+        a Server Component to a Client Component.
+      </p>
+      <p className="mb-5">
+        Each chunk is rendered in two steps: React renders Server Components
+        into a special data format called the React Server Component Payload
+        (RSC Payload).
+        <br />
+        Next.js uses the RSC Payload and Client Component JavaScript
+        instructions to render HTML on the server.
+        <br />
+        Then, on the client: The HTML is used to immediately show a fast
+        non-interactive preview of the route - this is for the initial page load
+        only.
+        <br />
+        The React Server Components Payload is used to reconcile the Client and
+        Server Component trees, and update the DOM. The JavaScript instructions
+        are used to hydrate Client Components and make the application
+        interactive.
+      </p>
       <div className="my-5">
         <Counter />
       </div>
