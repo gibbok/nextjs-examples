@@ -15,7 +15,7 @@ export default function Page() {
         via API instead of during the build process.
       </p>
       <p className="mb-5">
-        Difficult to implement outside Vercel&#39;s infrastructure.
+        Difficult to implement outside Vercel&apos;s infrastructure.
       </p>
       <p className="mb-5">
         Next.js will automatically create a Serverless Vercel Function that can

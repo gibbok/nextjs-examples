@@ -3,6 +3,9 @@ import { Temperatures } from './temperatures'
 import { Pollutions } from './pollutions'
 // import { Chunks } from './chunks'
 
+// Force the page to be dynamic
+export const dynamic = 'force-dynamic'
+
 export default async function Page() {
   return (
     <div>
