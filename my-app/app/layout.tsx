@@ -30,7 +30,7 @@ export default function RootLayout({
         <div className="flex m-5">
           <nav className="flex flex-col mr-10">
             <p className="uppercase">Server Components</p>
-            <ul>
+            <ul className="">
               <li>
                 <a className="underline" href="">
                   Static Rendering
