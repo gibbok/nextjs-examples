@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import Link from 'next/link'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -32,24 +33,24 @@ export default function RootLayout({
             Server Components
             <ul className="">
               <li>
-                <a className="underline" href="">
+                <Link className="underline" href="">
                   Static Rendering
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="underline" href="">
+                <Link className="underline" href="">
                   Incremental Static Regeneration (ISR)
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="underline" href="">
+                <a className="underline" href="/dynamic-render">
                   Dyanamic Rendering
                 </a>
               </li>
               <li>
-                <a className="underline" href="">
+                <Link className="underline" href="">
                   Streaming
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
