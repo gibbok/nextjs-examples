@@ -48,6 +48,11 @@ export default function RootLayout({
                 </Link>
               </li>
               <li>
+                <Link className="underline" href="/dynamic-render-streaming">
+                  Dynamic Rendering with Streaming
+                </Link>
+              </li>
+              <li>
                 <Link className="underline" href="">
                   Incremental Static Regeneration (ISR)
                 </Link>
