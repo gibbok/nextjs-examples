@@ -11,6 +11,7 @@ export default function Page() {
       <p className="mb-5">
         Partial Prerendering (PPR) enables you to combine static and dynamic
         components together in the same route.
+      </p>
       <p className="mb-5">
         This is an experimental feature not recommed in production yet.
       </p>
