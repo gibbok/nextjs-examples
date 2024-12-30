@@ -58,8 +58,11 @@ export default function RootLayout({
                 </Link>
               </li>
               <li>
-                <Link className="underline" href="">
-                  TODO Incremental Static Regeneration (ISR)
+                <Link
+                  className="underline"
+                  href="/incremental-static-regeneration-isr"
+                >
+                  Incremental Static Regeneration (ISR)
                 </Link>
               </li>
             </ul>

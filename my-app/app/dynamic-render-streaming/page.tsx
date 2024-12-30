@@ -20,7 +20,7 @@ export default async function Page() {
       </p>
       <p className="mb-5">
         One advantage of this approach is that you can significantly reduce your
-        page&#39;s overall loading time.
+        page&apos;s overall loading time.
       </p>
       <div className="flex w-max">
         <Suspense fallback={'Loading Temperatures ... '}>
