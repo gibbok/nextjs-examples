@@ -68,6 +68,12 @@ export default async function Page() {
           `number`: seconds the resource should be cached
           <br />
         </li>
+        <li>
+          Fetch `options.next.tags`
+          <br />
+          `[string]`: array fo string, set the cache tags for a resource. Data
+          can then be revalidated on-demand using revalidateTag .
+        </li>
       </ul>
       <pre>{JSON.stringify(data, undefined, 4)}</pre>
       https://nextjs.org/docs/app/building-your-application/caching#data-cache
