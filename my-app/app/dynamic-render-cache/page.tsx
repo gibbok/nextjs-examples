@@ -1,3 +1,5 @@
+import { ButtonInvalidate } from './button-invalidate'
+
 export type Todo = {
   userId: number
   id: number
@@ -85,6 +87,7 @@ export default async function Page() {
         specific cache tag.
         <br />
       </p>
+      <ButtonInvalidate />
       <pre>{JSON.stringify(data, undefined, 4)}</pre>
       https://nextjs.org/docs/app/building-your-application/caching#data-cache
     </div>
