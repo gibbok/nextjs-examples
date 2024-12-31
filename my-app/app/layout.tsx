@@ -52,6 +52,11 @@ export default function RootLayout({
                 </Link>
               </li>
               <li>
+                <Link className="underline" href="/dynamic-render-cache">
+                  Dynamic Rendering with Cache
+                </Link>
+              </li>
+              <li>
                 <Link className="underline" href="/partial-pre-rendering-ppr">
                   Partial Prerendering (PPR)
                 </Link>
