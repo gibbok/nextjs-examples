@@ -45,11 +45,32 @@ export default async function Page() {
         https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#revalidate
       </p>
       <ul className="list-disc ml-2 mb-5">
-        <li>XXX</li>
-        <li>XXX</li>
+        <li>
+          Fetch `options.cache` option:
+          https://nextjs.org/docs/app/api-reference/functions/fetch#optionscache
+          `auto no cache`: in dev fetch on request in prod, fetch on build only.
+          <br />
+          `no-store`: fetch every request, no cache
+          <br />
+          `force-cache`: looks for a match in ccache, if match and fresh, return
+          from cache, if no match or state, fetch from source and update the
+          cache
+          <br />
+        </li>
+        <li>
+          Fetch `options.next.revalidate`
+          <br />
+          `false`: chea the indefinitely, HTTP cache may be evicted order
+          resournced over time.
+          <br />
+          `0`:prevent resource to being cached
+          <br />
+          `number`: seconds the resource should be cached
+          <br />
+        </li>
       </ul>
-
       <pre>{JSON.stringify(data, undefined, 4)}</pre>
+      https://nextjs.org/docs/app/building-your-application/caching#data-cache
     </div>
   )
 }
