@@ -1,22 +1,18 @@
-type Todo = {
+export type Todo = {
   userId: number
   id: number
   title: string
   completed: boolean
 }
 
-const fetchData = (): Promise<Todo[]> => {
-  console.log('xxxxxxx fetching data')
-  return fetch('http://localhost:3001/todos', { cache: 'force-cache' }).then(
-    (response) => response.json()
-  )
-}
-
-// Force the page to be dynamic
-export const dynamic = 'force-dynamic'
-
 export default async function Page() {
-  const result = await fetchData()
+  // Cached, response was retrieved from layout and this request won't run within 10 seconds
+  const data = await fetch('http://localhost:3001/todos', {
+    next: { revalidate: 10 },
+  }).then((response) => {
+    console.log('fetch data')
+    return response.json()
+  })
 
   return (
     <div>
@@ -28,7 +24,7 @@ export default async function Page() {
         <li>XXX</li>
       </ul>
 
-      <pre>{JSON.stringify(result, undefined, 4)}</pre>
+      <pre>{JSON.stringify(data, undefined, 4)}</pre>
     </div>
   )
 }
