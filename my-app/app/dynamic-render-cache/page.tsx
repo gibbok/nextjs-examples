@@ -75,6 +75,16 @@ export default async function Page() {
           can then be revalidated on-demand using revalidateTag .
         </li>
       </ul>
+      <p className="mb-5">
+        To purge cache-data on demand we can use:
+        <br />
+        `revalidatePath()` allows you to purge cached data on-demand for a
+        specific path.
+        <br />
+        `revalidateTag()` allows you to purge cached data on-demand for a
+        specific cache tag.
+        <br />
+      </p>
       <pre>{JSON.stringify(data, undefined, 4)}</pre>
       https://nextjs.org/docs/app/building-your-application/caching#data-cache
     </div>
