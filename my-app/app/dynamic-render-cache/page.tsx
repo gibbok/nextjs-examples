@@ -22,35 +22,39 @@ export default async function Page() {
       <h2 className="text-3xl mb-5"> Dynamic Rendering Caching</h2>
       <p className="mb-5">
         Fetch of data on the server can be cached, and invalidated in different
-        way
+        ways.
       </p>
       <p className="mb-5">
         To cache data we can use the `fetch` API, please note the `fetch` must
-        be used directly in the component and not wrapped in some other function
-        in order to Next.js automatically cache the result of the `fetch`.
+        be used directly in the component and not wrapped in some other
+        functions in order to Next.js automatically cache the result of the
+        `fetch`.
       </p>
       <p className="mb-5">
         If the `fetch` function is nested in another function, or we use a ORM,
         we need to wrap this functions into `unstable_cache` (from Next.js) so
-        they can be cache properly).
+        they can be cached properly.
       </p>
       <p className="mb-5">
-        The `fetch` function in Next.js has some options object to be passed
-        they cotrol how caching and revaliadation works. To reuse data across
-        multiple function (the reqeust is memoized) we can pass to `fetch`
+        The `fetch` function in Next.js has some options object to be passed,
+        they control how caching and revaliadation works. To reuse data across
+        multiple functions (the request is memoized) we can pass to `fetch`
         object `cache: forced`, this means you can safely call the same URL with
         the same options, and only one request will be made.
       </p>
       <p className="mb-5">
-        We can also object option to `fetch` next as `revalidate`, this set the
-        default revalidation time for the request (time based invalidation).
+        We can also pass an object for options to `fetch` next as `revalidate`,
+        this set the default revalidation time for the request (time based
+        invalidation).
+        <br />
         https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#revalidate
+        <br />
+        https://nextjs.org/docs/app/api-reference/functions/fetch#optionscache
       </p>
       <ul className="list-disc ml-2 mb-5">
         <li>
-          Fetch `options.cache` option:
-          https://nextjs.org/docs/app/api-reference/functions/fetch#optionscache
-          `auto no cache`: in dev fetch on request in prod, fetch on build only.
+          Fetch `options.cache` option: `auto no cache`: in dev fetch on request
+          in prod, fetch on build only.
           <br />
           `no-store`: fetch every request, no cache
           <br />
