@@ -34,13 +34,7 @@ export default function Page() {
           an action is invoked, Next.js can return both the updated UI and new
           data in a single server roundtrip.
         </li>
-        <li></li>
-        <li></li>
       </ul>
-      <p className="mb-5">x</p>
-      <p className="mb-5">x</p>
-      <p className="mb-5">x</p>
-
       <FormCreateComment />
     </div>
   )

@@ -1,11 +1,16 @@
 'use client'
 
+import { useActionState } from 'react'
 import { createComment } from './actions'
 
 export function FormCreateComment() {
+  const [state, formAction, pending] = useActionState(createComment, null)
+  console.log('xxxx state', state)
+  console.log('xxx pending', pending)
+
   return (
     <form
-      action={createComment}
+      action={formAction}
       className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
       encType="multipart/form-data"
     >
@@ -20,17 +25,19 @@ export function FormCreateComment() {
         type="text"
         name="comment"
         placeholder="your comment"
-        defaultValue="positive comment"
+        defaultValue={'my comment'}
         className="my-5 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       />
       <div className="flex items-center justify-between">
         <button
+          disabled={pending}
           type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
         >
           Create comment
         </button>
       </div>
+      {pending ? ' Loading .... (posting to server)' : ''}
     </form>
   )
 }

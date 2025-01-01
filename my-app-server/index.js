@@ -20,7 +20,9 @@ app.get("/", (_request, response) => {
 app.post("/comment", upload.none(), (request, response) => {
   console.log(request.body);
 
-  response.status(200).json(request.body);
+  setTimeout(() => {
+    response.status(200).json(request.body);
+  }, 4000);
 });
 
 app.get("/todos", function (_req, res) {
