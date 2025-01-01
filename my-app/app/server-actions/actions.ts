@@ -7,7 +7,7 @@ export type StateForm = {
   comment: string
 }
 
-export type State = { status: number }
+export type State = { status: 'OK' | 'KO' | 'INIT' }
 
 // This a server action, is a function which will be accessible via the client.
 // Next.js under the hook will make a POST request.
@@ -20,13 +20,13 @@ export async function createComment(_prevState: State, formData: FormData) {
   } catch (e) {
     console.error(e)
     return {
-      status: 500,
-    }
+      status: 'KO',
+    } satisfies State
   }
 
   revalidatePath('/server-actions')
 
   return {
-    status: 200,
-  }
+    status: 'OK',
+  } satisfies State
 }

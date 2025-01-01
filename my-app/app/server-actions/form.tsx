@@ -3,12 +3,10 @@
 import { useActionState } from 'react'
 import { createComment, State } from './actions'
 
-const initState: State = { status: -1 }
+const initState: State = { status: 'INIT' }
 
 export function FormCreateComment() {
   const [state, formAction, pending] = useActionState(createComment, initState)
-  console.log('xxxx state', state)
-  console.log('xxx pending', pending)
 
   return (
     <form
@@ -20,14 +18,14 @@ export function FormCreateComment() {
         type="text"
         name="name"
         placeholder="your name"
-        defaultValue="user 1"
+        defaultValue="Batman"
         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       />
       <input
         type="text"
         name="comment"
         placeholder="your comment"
-        defaultValue={'my comment'}
+        defaultValue={'I love Next.js!'}
         className="my-5 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       />
       <div className="flex items-center justify-between">
@@ -39,7 +37,8 @@ export function FormCreateComment() {
           Create comment
         </button>
       </div>
-      {pending ? ' Loading .... (posting to server)' : ''}
+      {pending ? ' Loading .... (posting to server)' : null}
+      {state.status === 'OK' ? 'Form sumbitted!' : null}
     </form>
   )
 }
