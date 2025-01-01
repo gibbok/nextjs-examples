@@ -2,7 +2,22 @@
 
 Sample application demonstrating Next.js capabilities in terms of rendering and caching.
 
+Topics included:
+
+- Static Rendering
+- Static Site Generation (SSG)
+- Dynamic Rendering
+- Dynamic Rendering with Streaming
+- Dynamic Rendering with Cache
+- Partial Prerendering (PPR)
+- Incremental Static Regeneration (ISR)
+- Hydratation
+- Cache
+- Server Actions and Mutations
+
 Install the latest Node.js:
+
+## Setup
 
 ```bash
 nvm install node

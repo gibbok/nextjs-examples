@@ -1,6 +1,4 @@
 import Image from 'next/image'
-import { Suspense } from 'react'
-import { Temperatures } from '../dynamic-render-streaming/temperatures'
 
 // export const experimental_ppr = true
 
