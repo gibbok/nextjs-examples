@@ -79,6 +79,11 @@ export default function RootLayout({
                   Cache
                 </Link>
               </li>
+              <li>
+                <Link className="underline" href="/server-actions">
+                  Server Actions and Mutations
+                </Link>
+              </li>
             </ul>
           </nav>
           <main>{children}</main>
