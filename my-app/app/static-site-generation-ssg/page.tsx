@@ -47,8 +47,8 @@ export default async function Page() {
         treats this as a static page.
       </p>
       <p className="mb-5">
-        This featyre is ideal for sites with articles or posts that don&apos;t
-        require frequent updates. Can work together with headless CMS like
+        This feature is ideal for sites with articles or posts that don&apos;t
+        require frequent updates. It can work together with headless CMS like
         Contentful to fetch and render content at build time. Triggering static
         site builds can be done using webhooks.
       </p>

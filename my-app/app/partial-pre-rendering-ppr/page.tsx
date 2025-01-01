@@ -13,14 +13,14 @@ export default function Page() {
         components together in the same route.
       </p>
       <p className="mb-5">
-        This is an experimental feature not recommed in production yet.
+        This is an experimental feature not recommended in production yet.
       </p>
       <p className="mb-5">
         During the build, Next.js prerenders as much of the route as possible.
         If dynamic code is detected, like reading from the incoming request, you
         can wrap the relevant component with a React Suspense boundary. The
         Suspense boundary fallback will then be included in the prerendered
-        HTML. https://www.youtube.com/watch?v=MTcPrTIBkpA
+        HTML.
       </p>
       <p className="mb-5">
         To prevent creating many HTTP requests for each dynamic component, PPR
@@ -29,9 +29,7 @@ export default function Page() {
         roundtrips needed for each dynamic component.
       </p>
       <Image src="/ppr-1.png" width={1000} height={1000} alt="PPR 1" />
-      <Suspense fallback={'Loading Temperatures ... '}>
-        <Temperatures />
-      </Suspense>
+      <div>https://www.youtube.com/watch?v=MTcPrTIBkpA</div>
     </div>
   )
 }

@@ -1,15 +1,28 @@
 import express from "express";
+import multer from "multer";
+
+const upload = multer();
 
 const PORT = 3001;
 
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+
 export function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-app.get("/", (request, response) => {
+app.get("/", (_request, response) => {
   response.status(200).send("Hello World");
+});
+
+app.post("/comment", upload.none(), (request, response) => {
+  console.log(request.body);
+
+  setTimeout(() => {
+    response.status(200).json(request.body);
+  }, 4000);
 });
 
 app.get("/todos", function (_req, res) {
