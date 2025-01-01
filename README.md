@@ -30,6 +30,11 @@ cd my-app
 npm run build && npm run start 
 ```
 
+Useful links:
+
+- <https://demo.vercel.store/>
+- <https://nextjs.org/docs/app/building-your-application/caching>
+
 
 
 
