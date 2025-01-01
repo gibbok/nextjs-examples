@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Page() {
   return (
     <div>
-      <h2 className="text-3xl mb-5">Hydratation</h2>
+      <h2 className="text-3xl mb-5">Hydration</h2>
       <p className="mb-5">
         Hydration is the process of transforming pre-rendered server-side
         content into an interactive user interface on the client side. When a
@@ -18,8 +18,8 @@ export default function Page() {
       <p className="mb-5">
         Page linked from `Link` component from Next.js can be prefetched to
         improve performance. Prefetch works only in production mode. When
-        prefetched, the RSC Payload is loaded in advanced so on the request the
-        new page can be hydratate faster.
+        prefetched, the RSC Payload is loaded in advance so on the request the
+        new page can be hydrated faster.
       </p>
       <p className="mb-5">
         On the server, Next.js uses React&apos;s APIs to orchestrate rendering.
