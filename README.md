@@ -15,9 +15,9 @@ Topics included:
 - Cache
 - Server Actions and Mutations
 
-Install the latest Node.js:
-
 ## Setup
+
+Install the latest Node.js (assuming you are using nvm):
 
 ```bash
 nvm install node
