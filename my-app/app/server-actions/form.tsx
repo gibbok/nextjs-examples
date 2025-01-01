@@ -1,10 +1,12 @@
 'use client'
 
 import { useActionState } from 'react'
-import { createComment } from './actions'
+import { createComment, State } from './actions'
+
+const initState: State = { status: -1 }
 
 export function FormCreateComment() {
-  const [state, formAction, pending] = useActionState(createComment, null)
+  const [state, formAction, pending] = useActionState(createComment, initState)
   console.log('xxxx state', state)
   console.log('xxx pending', pending)
 
