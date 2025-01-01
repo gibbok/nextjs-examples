@@ -10,9 +10,9 @@ export default function Page() {
       <p className="mb-5">
         Benefits: Incremental Static Regeneration (ISR) enables fast, globally
         cached static pages by leveraging Vercel&apos;s Edge Network and durable
-        storage. It reduces backend load by caching content and prevent call the
-        data store and minimizes build times by generating pages on demand or
-        via API instead of during the build process.
+        storage. It reduces backend load by caching content and prevents calling
+        the data store and minimizes build times by generating pages on demand
+        or via API instead of during the build process.
       </p>
       <p className="mb-5">
         Difficult to implement outside Vercel&apos;s infrastructure.
