@@ -32,8 +32,8 @@ export default async function Page() {
       </p>
       <p className="mb-5">
         If the `fetch` function is nested in another function, or we use a ORM,
-        we need to wrap this functions into `unstable_cache` (from Next.js) so
-        they can be cached properly.
+        we need to wrap this functions into `unstable_cache` function (from
+        Next.js) so they can be cached properly.
       </p>
       <p className="mb-5">
         The `fetch` function in Next.js has some options object to be passed,
