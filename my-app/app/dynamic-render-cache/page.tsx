@@ -53,42 +53,43 @@ export default async function Page() {
       </p>
       <ul className="list-disc ml-2 mb-5">
         <li>
-          Fetch `options.cache` option: `auto no cache`: in dev fetch on request
-          in prod, fetch on build only.
+          Fetch `options.cache` option: `auto no cache`: In development: Fetches
+          data on request. In production: Fetches data only during the build
+          process.
           <br />
-          `no-store`: fetch every request, no cache
+          `no-store`: Fetches data on every request without caching.
           <br />
-          `force-cache`: looks for a match in cache, if match and fresh, return
-          from cache, if no match or stale, fetch from source and update the
-          cache
+          `force-cache`: Checks the cache for a match. If a match is found and
+          fresh, it returns the cached data. If no match is found or the cache
+          is stale, it fetches the data from the source and updates the cache.
           <br />
         </li>
         <li>
           Fetch `options.next.revalidate`
           <br />
-          `false`: cache the indefinitely, HTTP cache may be evicted order
-          resources over time.
+          `false`: Caches the resource indefinitely, though HTTP cache entries
+          may be evicted over time.
           <br />
-          `0`: prevent resource to being cached
+          `0`: Prevents the resource from being cached.
           <br />
-          `number`: seconds the resource should be cached
+          `number`: Specifies the number of seconds the resource should be
+          cached.
           <br />
         </li>
         <li>
           Fetch `options.next.tags`
           <br />
-          `[string]`: array of string, set the cache tags for a resource. Data
-          can then be revalidated on-demand using revalidateTag.
+          `[string]`: An array of strings used to set cache tags for a resource.
+          The data can then be revalidated on demand using `revalidateTag``.
         </li>
       </ul>
       <p className="mb-5">
         To purge cache-data on demand we can use:
         <br />
-        `revalidatePath()` allows you to purge cached data on-demand for a
-        specific path.
+        `revalidatePath()`: Purges cached data on demand for a specific path.
         <br />
-        `revalidateTag()` allows you to purge cached data on-demand for a
-        specific cache tag.
+        `revalidateTag()`: Purges cached data on demand for a specific cache
+        tag.
         <br />
       </p>
       <ButtonInvalidate />
