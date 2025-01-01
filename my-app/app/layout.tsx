@@ -74,6 +74,11 @@ export default function RootLayout({
                   Hydratation
                 </Link>
               </li>
+              <li>
+                <Link className="underline" href="/cache">
+                  Cache
+                </Link>
+              </li>
             </ul>
           </nav>
           <main>{children}</main>
