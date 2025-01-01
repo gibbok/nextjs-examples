@@ -93,7 +93,6 @@ export default async function Page() {
       </p>
       <ButtonInvalidate />
       <pre>{JSON.stringify(data, undefined, 4)}</pre>
-      https://nextjs.org/docs/app/building-your-application/caching#data-cache
     </div>
   )
 }

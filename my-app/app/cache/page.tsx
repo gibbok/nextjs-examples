@@ -9,7 +9,7 @@ export default function Page() {
       </p>
       <p className="mb-5">
         Request Memoization: React extends the fetch API to automatically
-        memoize requests that have the same URL and options.This means you can
+        memoize requests that have the same URL and options. This means you can
         call a fetch function for the same data in multiple places in a React
         component tree while only executing it once.
       </p>
@@ -37,7 +37,7 @@ export default function Page() {
         <li>React Rendering on the Server</li>
         <li>
           Rendering work is split in two chunks, each chunk is rendered in two
-          steps :
+          steps:
         </li>
         <li>
           React renders Server Components into a special data format, optimized
@@ -83,7 +83,7 @@ export default function Page() {
           Router Cache on the client.
         </li>
         <li>
-          Notes: Whether a route is cached or not at build time depends on
+          Note: Whether a route is cached or not at build time depends on
           whether it&apos;s statically or dynamically rendered. Static routes
           are cached by default, whereas dynamic routes are rendered at request
           time, and not cached.
