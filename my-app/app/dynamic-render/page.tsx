@@ -30,7 +30,7 @@ export default async function Page() {
         URL search parameters).
       </p>
       <p className="mb-5">
-        A page become dynamic when the following feature are used:
+        A page becomes dynamic when the following features are used:
       </p>
       <ul className="list-disc ml-2 mb-5">
         <li>
@@ -45,7 +45,7 @@ export default async function Page() {
         <li>
           Explicit configuration: You can explicitly set a route to be dynamic
           by using the `force-dynamic` (used in this code example) option in the
-          route segment config .
+          route segment config.
         </li>
         <li>
           Uncached data fetching: If you use `fetch()` requests without caching
