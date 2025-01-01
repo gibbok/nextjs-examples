@@ -4,12 +4,21 @@ const PORT = 3001;
 
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+
 export function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 app.get("/", (request, response) => {
   response.status(200).send("Hello World");
+});
+
+app.post("/comment", (request, response) => {
+  const { name, comment } = request.body;
+
+  console.log("xxx income request post comment", name, comment);
+  response.status(200).json({ name, comment });
 });
 
 app.get("/todos", function (_req, res) {

@@ -1,3 +1,5 @@
+import { FormCreateComment } from './form'
+
 export default function Page() {
   return (
     <div>
@@ -7,10 +9,15 @@ export default function Page() {
         server. They can be called in Server and Client Components to handle
         form submissions and data mutations in Next.js applications.
       </p>
+      <p className="mb-5">
+        Behind the scenes, actions use the POST method, and only this HTTP
+        method can invoke them.
+      </p>
       <p className="mb-5">x</p>
       <p className="mb-5">x</p>
       <p className="mb-5">x</p>
-      <p className="mb-5">x</p>
+
+      <FormCreateComment />
     </div>
   )
 }
