@@ -13,7 +13,7 @@ export default function Page() {
         components together in the same route.
       </p>
       <p className="mb-5">
-        This is an experimental feature not recommed in production yet.
+        This is an experimental feature not recommended in production yet.
       </p>
       <p className="mb-5">
         During the build, Next.js prerenders as much of the route as possible.
