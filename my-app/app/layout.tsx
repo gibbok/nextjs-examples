@@ -37,7 +37,7 @@ export default function RootLayout({
                 </Link>
               </li>
               <li>
-                <Link className="underline" href="/static-site-generatiorn-ssg">
+                <Link className="underline" href="/static-site-generation-ssg">
                   Static Site Generation (SSG)
                 </Link>
               </li>
