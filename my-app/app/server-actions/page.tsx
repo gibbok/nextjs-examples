@@ -25,7 +25,7 @@ export default function Page() {
         <li>
           In Client Components, forms invoking Server Actions will queue
           submissions if JavaScript isn&apos;t loaded yet, prioritizing client
-          hydration.After hydration, the browser does not refresh on form
+          hydration. After hydration, the browser does not refresh on form
           submission.
         </li>
         <li>Server Actions can be invoked from event handlers or useEffect.</li>
