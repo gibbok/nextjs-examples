@@ -37,10 +37,10 @@ export default async function Page() {
       </p>
       <p className="mb-5">
         The `fetch` function in Next.js has some options object to be passed,
-        they control how caching and revaliadation works. To reuse data across
+        they control how caching and revalidation works. To reuse data across
         multiple functions (the request is memoized) we can pass to `fetch`
-        object `cache: forced`, this means you can safely call the same URL with
-        the same options, and only one request will be made.
+        object `cache: force-cache`, this means you can safely call the same URL
+        with the same options, and only one request will be made.
       </p>
       <p className="mb-5">
         We can also pass an object for options to `fetch` next as `revalidate`,
@@ -58,18 +58,18 @@ export default async function Page() {
           <br />
           `no-store`: fetch every request, no cache
           <br />
-          `force-cache`: looks for a match in ccache, if match and fresh, return
-          from cache, if no match or state, fetch from source and update the
+          `force-cache`: looks for a match in cache, if match and fresh, return
+          from cache, if no match or stale, fetch from source and update the
           cache
           <br />
         </li>
         <li>
           Fetch `options.next.revalidate`
           <br />
-          `false`: chea the indefinitely, HTTP cache may be evicted order
-          resournced over time.
+          `false`: cache the indefinitely, HTTP cache may be evicted order
+          resources over time.
           <br />
-          `0`:prevent resource to being cached
+          `0`: prevent resource to being cached
           <br />
           `number`: seconds the resource should be cached
           <br />
@@ -77,8 +77,8 @@ export default async function Page() {
         <li>
           Fetch `options.next.tags`
           <br />
-          `[string]`: array fo string, set the cache tags for a resource. Data
-          can then be revalidated on-demand using revalidateTag .
+          `[string]`: array of string, set the cache tags for a resource. Data
+          can then be revalidated on-demand using revalidateTag.
         </li>
       </ul>
       <p className="mb-5">
